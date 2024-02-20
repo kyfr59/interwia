@@ -3,11 +3,16 @@
 declare global {
 	namespace App {
 		// interface Error {}
-		// interface Locals {}
+		interface Locals {
+            userEmail: string|null
+        }
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
-	}
+        interface JwtPayload {
+            email?: string | underfined;
+        }
+    }
 }
 
 export {};
