@@ -5,7 +5,11 @@
 <div class="row">
     <h1>Bienvenue</h1>
     <h2>{data.userEmail}</h2>
-    <a href="/login" class="mt-4">Se connecter</a>
+    {#if data.userEmail}
+        <div class="mt-4">
+            <a href="/logout">Se déconnecter</a>
+        </div>
+    {/if}
 </div>
 
 <style>
