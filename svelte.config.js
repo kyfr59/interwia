@@ -1,7 +1,12 @@
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-node'
 
-export default {
-	kit: {
-		adapter: adapter()
-	}
-};
+const config = {
+  kit: {
+    adapter: adapter(),
+    csrf: {
+      checkOrigin: false,
+    }
+  },
+}
+
+export default config
