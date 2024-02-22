@@ -1,4 +1,4 @@
-import { error } from '@sveltejs/kit'
+import { error, redirect } from '@sveltejs/kit'
 import 'dotenv/config'
 import { fail } from '@sveltejs/kit'
 import { verifyToken } from '../../../shared.js'
@@ -36,6 +36,8 @@ export const actions = {
             path: '/',
             secure: false
         })
+
+        redirect(302, '/')
     }
 }
 

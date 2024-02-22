@@ -3,7 +3,8 @@ import { redirect } from '@sveltejs/kit'
 export function load({ locals, cookies }) {
 	if (locals.userEmail) {
         cookies.delete('token', {
-            path : '/'
+            path : '/',
+            secure: false
         })
         locals.userEmail = ''
     }
