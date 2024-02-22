@@ -33,7 +33,8 @@ export const actions = {
         }
 
         cookies.set('token', token, {
-            "path": '/',
+            path: '/',
+            secure: false
         })
     }
 }
